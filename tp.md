@@ -114,6 +114,7 @@ DELETE /_all
     }
   }
 }
+```
 *vérification de l'existance GET /data/_mapping
 *à rajouter "include_in_all": true,
 
