@@ -11,10 +11,12 @@ must not
 should
 
 term, wildcard, prefix, fuzzy, range, query-string, text, missing
+```
 zenika/produit/_search?q=classic   GET
 zenika/produit/_search?q=titre:rune   GET
-
-recherche sur plusieurs champs
+```
+*recherche sur plusieurs champs
+```
 bibli/_search?q=auteur.nom:poe OR acteur.nom:dalton   GET
 bibli/_search?q=auteur.\*:poe
 bibli/_search?q=\*.nom:d*
@@ -24,11 +26,12 @@ bibli/_search?q=\*.nom:d*
 /bib*,-bibli2/_search?q=venus
 /bib*/_search?q=jul
 /bibli2*,-bibli/_search?q=chatel
-
+```
 # sense
+```
 GET _search
 {"query":{"bool":{"must":[{"query_string":{"default_field":"_all","query":"bye"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
-
+```
 # TP2 
 
 *Creation index:
